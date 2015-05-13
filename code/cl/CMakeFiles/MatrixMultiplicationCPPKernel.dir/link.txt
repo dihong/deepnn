@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG      -m64    CMakeFiles/MatrixMultiplicationCPPKernel.dir/src/MatrixMultiplicationCPPKernel.cpp.o  -o bin/x86_64/Release/MatrixMultiplicationCPPKernel -rdynamic -lOpenCL -lrt 
