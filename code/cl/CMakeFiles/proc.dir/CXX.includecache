@@ -6,9 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/setup.cpp
+/media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/kernels.cpp
 main.hpp
 /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/main.hpp
+kernels.hpp
+/media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/kernels.hpp
+math.h
+/media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/math.h
+SDKThread.hpp
+/media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/SDKThread.hpp
+iostream
+-
+fstream
+-
 
 include/CL/cl.h
 OpenCL/cl_platform.h
@@ -38,6 +48,28 @@ mmintrin.h
 intrin.h
 -
 immintrin.h
+-
+
+include/SDKUtil/SDKThread.hpp
+windows.h
+include/SDKUtil/windows.h
+deque
+-
+assert.h
+include/SDKUtil/assert.h
+stdio.h
+-
+stdlib.h
+-
+process.h
+-
+pthread.h
+include/SDKUtil/pthread.h
+
+include/kernels.hpp
+memory.h
+include/memory.h
+vector
 -
 
 include/main.hpp

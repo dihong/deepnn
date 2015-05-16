@@ -114,6 +114,30 @@ proc/fast:
 	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/build
 .PHONY : proc/fast
 
+src/kernels.o: src/kernels.cpp.o
+.PHONY : src/kernels.o
+
+# target to build an object file
+src/kernels.cpp.o:
+	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/kernels.cpp.o
+.PHONY : src/kernels.cpp.o
+
+src/kernels.i: src/kernels.cpp.i
+.PHONY : src/kernels.i
+
+# target to preprocess a source file
+src/kernels.cpp.i:
+	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/kernels.cpp.i
+.PHONY : src/kernels.cpp.i
+
+src/kernels.s: src/kernels.cpp.s
+.PHONY : src/kernels.s
+
+# target to generate assembly for a file
+src/kernels.cpp.s:
+	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/kernels.cpp.s
+.PHONY : src/kernels.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -171,6 +195,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... proc"
 	@echo "... rebuild_cache"
+	@echo "... src/kernels.o"
+	@echo "... src/kernels.i"
+	@echo "... src/kernels.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

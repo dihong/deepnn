@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/proc.dir/src/main.cpp.o"
   "CMakeFiles/proc.dir/src/setup.cpp.o"
+  "CMakeFiles/proc.dir/src/kernels.cpp.o"
   "bin/x86_64/Release/proc.pdb"
   "bin/x86_64/Release/proc"
 )
