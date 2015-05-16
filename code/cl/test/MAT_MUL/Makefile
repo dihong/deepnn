@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl
+CMAKE_SOURCE_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl
+CMAKE_BINARY_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/CMakeFiles /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL/CMakeFiles /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,89 +102,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named proc
+# Target rules for targets named MAT_MUL
 
 # Build rule for target.
-proc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 proc
-.PHONY : proc
+MAT_MUL: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MAT_MUL
+.PHONY : MAT_MUL
 
 # fast build rule for target.
-proc/fast:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/build
-.PHONY : proc/fast
+MAT_MUL/fast:
+	$(MAKE) -f CMakeFiles/MAT_MUL.dir/build.make CMakeFiles/MAT_MUL.dir/build
+.PHONY : MAT_MUL/fast
 
-src/kernels.o: src/kernels.cpp.o
-.PHONY : src/kernels.o
-
-# target to build an object file
-src/kernels.cpp.o:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/kernels.cpp.o
-.PHONY : src/kernels.cpp.o
-
-src/kernels.i: src/kernels.cpp.i
-.PHONY : src/kernels.i
-
-# target to preprocess a source file
-src/kernels.cpp.i:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/kernels.cpp.i
-.PHONY : src/kernels.cpp.i
-
-src/kernels.s: src/kernels.cpp.s
-.PHONY : src/kernels.s
-
-# target to generate assembly for a file
-src/kernels.cpp.s:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/kernels.cpp.s
-.PHONY : src/kernels.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+MAT_MUL.o: MAT_MUL.cpp.o
+.PHONY : MAT_MUL.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+MAT_MUL.cpp.o:
+	$(MAKE) -f CMakeFiles/MAT_MUL.dir/build.make CMakeFiles/MAT_MUL.dir/MAT_MUL.cpp.o
+.PHONY : MAT_MUL.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
-src/setup.o: src/setup.cpp.o
-.PHONY : src/setup.o
-
-# target to build an object file
-src/setup.cpp.o:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/setup.cpp.o
-.PHONY : src/setup.cpp.o
-
-src/setup.i: src/setup.cpp.i
-.PHONY : src/setup.i
+MAT_MUL.i: MAT_MUL.cpp.i
+.PHONY : MAT_MUL.i
 
 # target to preprocess a source file
-src/setup.cpp.i:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/setup.cpp.i
-.PHONY : src/setup.cpp.i
+MAT_MUL.cpp.i:
+	$(MAKE) -f CMakeFiles/MAT_MUL.dir/build.make CMakeFiles/MAT_MUL.dir/MAT_MUL.cpp.i
+.PHONY : MAT_MUL.cpp.i
 
-src/setup.s: src/setup.cpp.s
-.PHONY : src/setup.s
+MAT_MUL.s: MAT_MUL.cpp.s
+.PHONY : MAT_MUL.s
 
 # target to generate assembly for a file
-src/setup.cpp.s:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/setup.cpp.s
-.PHONY : src/setup.cpp.s
+MAT_MUL.cpp.s:
+	$(MAKE) -f CMakeFiles/MAT_MUL.dir/build.make CMakeFiles/MAT_MUL.dir/MAT_MUL.cpp.s
+.PHONY : MAT_MUL.cpp.s
 
 # Help Target
 help:
@@ -192,18 +144,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... MAT_MUL"
 	@echo "... edit_cache"
-	@echo "... proc"
 	@echo "... rebuild_cache"
-	@echo "... src/kernels.o"
-	@echo "... src/kernels.i"
-	@echo "... src/kernels.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/setup.o"
-	@echo "... src/setup.i"
-	@echo "... src/setup.s"
+	@echo "... MAT_MUL.o"
+	@echo "... MAT_MUL.i"
+	@echo "... MAT_MUL.s"
 .PHONY : help
 
 

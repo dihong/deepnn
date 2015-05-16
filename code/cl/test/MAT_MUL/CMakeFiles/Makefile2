@@ -50,44 +50,44 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl
+CMAKE_SOURCE_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl
+CMAKE_BINARY_DIR = /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL
 
 #=============================================================================
-# Target rules for target CMakeFiles/proc.dir
+# Target rules for target CMakeFiles/MAT_MUL.dir
 
 # All Build rule for target.
-CMakeFiles/proc.dir/all:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/depend
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/CMakeFiles  1 2 3
-	@echo "Built target proc"
-.PHONY : CMakeFiles/proc.dir/all
+CMakeFiles/MAT_MUL.dir/all:
+	$(MAKE) -f CMakeFiles/MAT_MUL.dir/build.make CMakeFiles/MAT_MUL.dir/depend
+	$(MAKE) -f CMakeFiles/MAT_MUL.dir/build.make CMakeFiles/MAT_MUL.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL/CMakeFiles  1
+	@echo "Built target MAT_MUL"
+.PHONY : CMakeFiles/MAT_MUL.dir/all
 
 # Include target in all.
-all: CMakeFiles/proc.dir/all
+all: CMakeFiles/MAT_MUL.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/proc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/proc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/CMakeFiles 0
-.PHONY : CMakeFiles/proc.dir/rule
+CMakeFiles/MAT_MUL.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MAT_MUL.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/test/MAT_MUL/CMakeFiles 0
+.PHONY : CMakeFiles/MAT_MUL.dir/rule
 
 # Convenience name for target.
-proc: CMakeFiles/proc.dir/rule
-.PHONY : proc
+MAT_MUL: CMakeFiles/MAT_MUL.dir/rule
+.PHONY : MAT_MUL
 
 # clean rule for target.
-CMakeFiles/proc.dir/clean:
-	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/clean
-.PHONY : CMakeFiles/proc.dir/clean
+CMakeFiles/MAT_MUL.dir/clean:
+	$(MAKE) -f CMakeFiles/MAT_MUL.dir/build.make CMakeFiles/MAT_MUL.dir/clean
+.PHONY : CMakeFiles/MAT_MUL.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/proc.dir/clean
+clean: CMakeFiles/MAT_MUL.dir/clean
 .PHONY : clean
 
 #=============================================================================

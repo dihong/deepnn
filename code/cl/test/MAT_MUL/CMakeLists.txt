@@ -14,9 +14,10 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #################################################################################
 
-set( SAMPLE_NAME proc )
-set( SOURCE_FILES src/main.cpp src/setup.cpp src/kernels.cpp)
-set( EXTRA_FILES src/mat_mul.cl )
+
+set( SAMPLE_NAME MAT_MUL )
+set( SOURCE_FILES MAT_MUL.cpp )
+set( EXTRA_FILES MAT_MUL.cl )
 
 ############################################################################
 
@@ -69,13 +70,13 @@ endif()
 # Find OpenCL include and libs
 find_path( OPENCL_INCLUDE_DIRS 
     NAMES OpenCL/cl.h CL/cl.h
-    HINTS include/ $ENV{AMDAPPSDKROOT}/include/
+    HINTS ../../include/ $ENV{AMDAPPSDKROOT}/include/
 )
 mark_as_advanced(OPENCL_INCLUDE_DIRS)
 
 find_library( OPENCL_LIBRARIES
 	NAMES OpenCL
-	HINTS lib/ $ENV{AMDAPPSDKROOT}/lib
+	HINTS ../../lib/ $ENV{AMDAPPSDKROOT}/lib
 	PATH_SUFFIXES ${PLATFORM}${BITNESS} ${BITNESS_SUFFIX}
 )
 mark_as_advanced( OPENCL_LIBRARIES )
@@ -108,7 +109,7 @@ set( LINKER_FLAGS " " )
 set( ADDITIONAL_LIBRARIES "" )
 
 file(GLOB INCLUDE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.hpp" "${CMAKE_CURRENT_SOURCE_DIR}/*.h" )
-include_directories( ${OPENCL_INCLUDE_DIRS} include/SDKUtil $ENV{AMDAPPSDKROOT}/include/SDKUtil )
+include_directories( ${OPENCL_INCLUDE_DIRS} ../../include/SDKUtil $ENV{AMDAPPSDKROOT}/include/SDKUtil )
 
 add_executable( ${SAMPLE_NAME} ${SOURCE_FILES} ${INCLUDE_FILES} ${EXTRA_FILES})
 
@@ -121,7 +122,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
 		if( CMAKE_BUILD_TYPE STREQUAL "Debug" )
 			set( COMPILER_FLAGS " -g " )
 		endif( )
-        set( ADDITIONAL_LIBRARIES ${ADDITIONAL_LIBRARIES} "rt" "pthread")
+        set( ADDITIONAL_LIBRARIES ${ADDITIONAL_LIBRARIES} "rt" )
     endif( )
     
     if( BITNESS EQUAL 32 )

@@ -39,5 +39,5 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/proc.dir/DependInfo.cmake"
+  "CMakeFiles/MAT_MUL.dir/DependInfo.cmake"
   )
