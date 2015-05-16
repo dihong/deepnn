@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG      -m64    CMakeFiles/MAT_MUL.dir/MAT_MUL.cpp.o  -o bin/x86_64/Release/MAT_MUL -rdynamic -lOpenCL -lrt 
