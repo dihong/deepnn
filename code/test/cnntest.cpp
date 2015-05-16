@@ -7,6 +7,8 @@
 //#include "cnntest.h"
 using namespace std;
 
+
+//dummy implementation
 void get_dimension (int& Xd, int& Pd)
 {
 	Xd = 100;
@@ -17,6 +19,8 @@ bool check_unit (const float* X, const float* P, float& E, float* dEdX, float* d
 {
 	return true;
 }
+//dummey implementation
+
 
 //check dEdX and dEdP
 bool test(void)
@@ -57,12 +61,12 @@ bool test(void)
 		P[i] = float(rand() % 10) / 10.0f;  //RAND_MAX;
 	}
 
-	//get 
+	//get dEdXs from all points in matrix X
 	bool flag = check_unit (X, P, E, dEdX, dEdP);
 
 	if(flag == true)
-	{
-		float delta = 0.001f;
+	{		
+		float delta = 0.001f;  //set delta
 		for (int s = 0; s < Xd; s++)
 		{
 			memcpy(X_low, X, sizeof(float)* Xd);
@@ -71,6 +75,9 @@ bool test(void)
 		    X_low[s] = X[s] - delta;
 			X_high[s]  = X[s] + delta;
 
+			//keep P the same
+			//get E_low when increase X[s]
+			//get E_high when increase X[s]
 			check_unit(X_low, P, E_low, dEdX_nouse, dEdP_nouse);
 			check_unit(X_high, P, E_high, dEdX_nouse, dEdP_nouse);
 			
@@ -81,7 +88,7 @@ bool test(void)
 				}
 		}
 
-		delta = 0.001f;
+		delta = 0.001f;  //set delta
 		for (int s = 0; s < Pd; s++)
 		{
 			memcpy(P_low, P, sizeof(float) * Pd);
@@ -90,6 +97,10 @@ bool test(void)
 			P_low[s] = P[s] - delta;
 			P_high[s] = P[s] + delta;
 
+
+			//keep X the same
+			//get E_low when increase P[s]
+			//get E_high when increase P[s]
 			check_unit(X, P_low, E_low, dEdX_nouse, dEdP_nouse);
 			check_unit(X, P_high, E_high, dEdX_nouse, dEdP_nouse);
 

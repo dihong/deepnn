@@ -1,3 +1,8 @@
+# run the program with command parameter
+#    python generate.py [number of test cases]
+# before running the test, please make sure ./convolution_python and ./convolution_model exist
+#    make sure there are same number of test cases generated from model (convultion result of Y) in ./convolution_model   
+
 import random
 import sys
 import pdb
@@ -15,8 +20,6 @@ prefix = "./convolution_python/"
 prefixModel = "./convolution_model/"
 decimal = 2
 accuracy  = "%." + str(decimal) + "f "
-
-
 
 # clear test cases in current directory and convultion directory (Y)
 
@@ -128,6 +131,9 @@ def generateY():
                 fcon.write(accuracy %e)
             fy.write("\n")
 
+
+            
+# compare Y from python to Y from model  
 def test():
     # read result from python
     for lo in range(0, int(inputNum)):
@@ -138,7 +144,7 @@ def test():
             del l[inputSize]
             YfromPython.append[l]
 
-##$ name of the file needs to be changed
+##$ name of the file needs to be changed to actual generated files from model
         fy = open(prefixModel + "y" + "y" + "-" + str(lo + 1), "r")
         YfromModel = []
         for line in fy.readlines():
@@ -159,3 +165,4 @@ if __name__ == '__main__':
     clear()
     generateX()
     generateY()
+    test()
