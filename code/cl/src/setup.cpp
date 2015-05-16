@@ -1,6 +1,7 @@
 #include "main.hpp"
 
 bool DEVICE::getDeviceInfo(cl_device_id device, string t){
+	id = device;
 	type = t;
 	if(CL_SUCCESS != clGetDeviceInfo(device, CL_DEVICE_NAME, sizeof(name), name, NULL)){
 		puts("DEVICE:: getDeviceInfo: CL_DEVICE_NAME.");
@@ -39,21 +40,23 @@ bool DEVICE::getDeviceInfo(cl_device_id device, string t){
 
 void DEVICE::showInfo(){
 	printf("name: %s\n",name);
+	printf("id: %ld\n",(long)id);
 	printf("type: %s\n",type.c_str());
 	printf("local memory size (bytes): %ld\n",LocalMemSize);
 	printf("global memory size (bytes): %ld\n",GlobalMemSize);
 	printf("constant memory size (bytes): %ld\n",ConstMemSize);
 	printf("number of computer units: %ld\n",NumComputeUnit);
+	printf("max work group size: %ld\n",MaxWorkgroupSize);
 }
 
-int CL_SETUP::init(){
+int CL_ENV::init(){
 	/*Getting platforms information. Note: there may be multiple platforms.*/
 	cl_uint numPlatforms;
 	cl_platform_id platform = NULL;	//the chosen platform
 	cl_int	status = clGetPlatformIDs(0, NULL, &numPlatforms);
 	if (status != CL_SUCCESS)
 	{
-		puts("CL_SETUP::init: Error getting number of platforms.");
+		puts("CL_ENV::init: Error getting number of platforms.");
 		return -1;
 	}
 	/*Use the first platform.*/
@@ -65,7 +68,7 @@ int CL_SETUP::init(){
 		platform = platforms[0];
 		free(platforms);
 	}else{
-		puts("CL_SETUP::init: No platform was found. Have you installed OpenCL?");
+		puts("CL_ENV::init: No platform was found. Have you installed OpenCL?");
 		return -1;
 	}
 
@@ -75,7 +78,7 @@ int CL_SETUP::init(){
 	status = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, 0, NULL, &num_gpu);  //get number of GPU devices
 	if (status != CL_SUCCESS)
 	{
-		puts("CL_SETUP::init: Error getting number of GPU devices.");
+		puts("CL_ENV::init: Error getting number of GPU devices.");
 		return -1;
 	}
 	gpu_devices = (cl_device_id*)malloc(num_gpu * sizeof(cl_device_id));
@@ -83,14 +86,14 @@ int CL_SETUP::init(){
 	status = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, 0, NULL, &num_cpu);  //get number of CPU devices
 	if (status != CL_SUCCESS)
 	{
-		puts("CL_SETUP::init: Error getting number of CPU devices.");
+		puts("CL_ENV::init: Error getting number of CPU devices.");
 		return -1;
 	}
 	cpu_devices = (cl_device_id*)malloc(num_cpu * sizeof(cl_device_id));
 	status = clGetDeviceIDs(platform, CL_DEVICE_TYPE_CPU, num_cpu, cpu_devices, NULL);  //get CPU devices
 	
 	if(num_cpu + num_cpu<=0){
-		puts("CL_SETUP::init: No device was discovered.");
+		puts("CL_ENV::init: No device was discovered.");
 		return -1;
 	}
 	

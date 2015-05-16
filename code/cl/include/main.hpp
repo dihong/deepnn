@@ -1,6 +1,7 @@
 #ifndef _MAIN_HPP_
 #define _MAIN_HPP_
 
+#define CL_USE_DEPRECATED_OPENCL_2_0_APIS
 
 #include <CL/cl.h>
 #include <stdio.h>
@@ -11,6 +12,7 @@ using namespace std;
 
 class DEVICE{
 public:
+	cl_device_id id;
 	char name[100];  //Device name.
 	string type;  //GPU, CPU.
 	cl_ulong LocalMemSize; //Total Local Memory size (in bytes). Note that some devices such as CPU or AMD 7xx GPU don't have local memory.
@@ -24,15 +26,11 @@ public:
 	void showInfo();
 };
 
-class CL_SETUP{
+class CL_ENV{
+public:
 	cl_context context; //OpenCL context.
 	DEVICE* devices;
-public:
 	int init();
-};
-
-class MAT_MUL{
-	
 };
 
 #endif

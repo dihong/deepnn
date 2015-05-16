@@ -15,7 +15,7 @@
 #################################################################################
 
 set( SAMPLE_NAME proc )
-set( SOURCE_FILES src/main.cpp src/setup.cpp src/kernels.cpp)
+set( SOURCE_FILES src/main.cpp src/setup.cpp src/kernels.cpp src/setup.cpp)
 set( EXTRA_FILES src/mat_mul.cl )
 
 ############################################################################

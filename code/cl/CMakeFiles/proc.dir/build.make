@@ -98,16 +98,41 @@ CMakeFiles/proc.dir/src/setup.cpp.o.provides: CMakeFiles/proc.dir/src/setup.cpp.
 
 CMakeFiles/proc.dir/src/setup.cpp.o.provides.build: CMakeFiles/proc.dir/src/setup.cpp.o
 
+CMakeFiles/proc.dir/src/kernels.cpp.o: CMakeFiles/proc.dir/flags.make
+CMakeFiles/proc.dir/src/kernels.cpp.o: src/kernels.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/proc.dir/src/kernels.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/proc.dir/src/kernels.cpp.o -c /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/kernels.cpp
+
+CMakeFiles/proc.dir/src/kernels.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proc.dir/src/kernels.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/kernels.cpp > CMakeFiles/proc.dir/src/kernels.cpp.i
+
+CMakeFiles/proc.dir/src/kernels.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proc.dir/src/kernels.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/dihong/2TB_RAID/MyWorks/DeepNN-Implementations/code/cl/src/kernels.cpp -o CMakeFiles/proc.dir/src/kernels.cpp.s
+
+CMakeFiles/proc.dir/src/kernels.cpp.o.requires:
+.PHONY : CMakeFiles/proc.dir/src/kernels.cpp.o.requires
+
+CMakeFiles/proc.dir/src/kernels.cpp.o.provides: CMakeFiles/proc.dir/src/kernels.cpp.o.requires
+	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/kernels.cpp.o.provides.build
+.PHONY : CMakeFiles/proc.dir/src/kernels.cpp.o.provides
+
+CMakeFiles/proc.dir/src/kernels.cpp.o.provides.build: CMakeFiles/proc.dir/src/kernels.cpp.o
+
 # Object files for target proc
 proc_OBJECTS = \
 "CMakeFiles/proc.dir/src/main.cpp.o" \
-"CMakeFiles/proc.dir/src/setup.cpp.o"
+"CMakeFiles/proc.dir/src/setup.cpp.o" \
+"CMakeFiles/proc.dir/src/kernels.cpp.o"
 
 # External object files for target proc
 proc_EXTERNAL_OBJECTS =
 
 bin/x86_64/Release/proc: CMakeFiles/proc.dir/src/main.cpp.o
 bin/x86_64/Release/proc: CMakeFiles/proc.dir/src/setup.cpp.o
+bin/x86_64/Release/proc: CMakeFiles/proc.dir/src/kernels.cpp.o
 bin/x86_64/Release/proc: CMakeFiles/proc.dir/build.make
 bin/x86_64/Release/proc: /usr/lib/x86_64-linux-gnu/libOpenCL.so
 bin/x86_64/Release/proc: CMakeFiles/proc.dir/link.txt
@@ -122,6 +147,7 @@ CMakeFiles/proc.dir/build: bin/x86_64/Release/proc
 
 CMakeFiles/proc.dir/requires: CMakeFiles/proc.dir/src/main.cpp.o.requires
 CMakeFiles/proc.dir/requires: CMakeFiles/proc.dir/src/setup.cpp.o.requires
+CMakeFiles/proc.dir/requires: CMakeFiles/proc.dir/src/kernels.cpp.o.requires
 .PHONY : CMakeFiles/proc.dir/requires
 
 CMakeFiles/proc.dir/clean:
