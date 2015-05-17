@@ -36,7 +36,7 @@ typedef struct K_PARAM{
 class MAT_MUL{
 public:
 	/*Run the kernel*/
-	void run(std::vector<K_PARAM>* P);
+	void run(K_PARAM* A, K_PARAM* B, K_PARAM* C);  // Caculate C = A*B. Dimensions of A and B must be multiple of 16.
 	
 	/*Get the resource requirement to run this kernel*/
 	inline void get_rsc_requirement(){

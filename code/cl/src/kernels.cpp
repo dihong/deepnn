@@ -60,25 +60,40 @@ string read_file(const char* fn){
 }
 
 void* thread_mat_mul (void* arg){
+
 	//calculate: C = A*B.
 	
-	vector<K_PARAM>& params = *(vector<K_PARAM>*)arg;  //parameters input to the kernel.
+	K_PARAM** params = (K_PARAM**)arg;  //parameters input to the kernel.
+	
+	if(params[0]->mat.w != params[1]->mat.h){
+		printf("thread_mat_mul: dimension inconsistent. A is %d-by-%d, B is %d-by-%d.\n",params[0]->mat.h,params[0]->mat.w,params[1]->mat.h,params[1]->mat.w);
+		return 0;
+	}
 	
 	/*Creating command queue associate with the context.*/
-	cl_context context = params[0].env->context;
-	cl_device_id device_id = params[0].device.id;
+	cl_context context = params[0]->env->context;
+	cl_device_id device_id = params[0]->device.id;
 	cl_command_queue commandQueue = clCreateCommandQueue(context, device_id, CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE, NULL);
-	int BLOCK_SIZE = sqrt(params[0].device.MaxWorkgroupSize);  
+	int BLOCK_SIZE = sqrt(params[0]->device.MaxWorkgroupSize);  
 	if(BLOCK_SIZE>16)//the size of block of each sub matrix.
 		BLOCK_SIZE = 16;
 		
-	/*Note: the number of rows for matrix A must be multiple of BLOCK_SIZE.*/
-	if(params[0].mat.h%BLOCK_SIZE != 0){
+	/*Note: the number of rows/columns for matrix A must be multiple of BLOCK_SIZE.*/
+	if(params[0]->mat.h%BLOCK_SIZE != 0){
 		printf("thread_mat_mul: the height of matrix A (C=A*B) must be multiple of BLOCK_SIZE(%d).\n", BLOCK_SIZE);
 		exit(-1);
+	}else if(params[0]->mat.stride%BLOCK_SIZE != 0){
+		printf("thread_mat_mul: the stride of matrix A (C=A*B) must be multiple of BLOCK_SIZE(%d).\n", BLOCK_SIZE);
+		exit(-1);
 	}
-	params[0].mat.pad(0,BLOCK_SIZE);
-	params[1].mat.pad(1,BLOCK_SIZE);
+	/*Note: the number of rows/columns for matrix B must be multiple of BLOCK_SIZE.*/
+	if(params[1]->mat.h%BLOCK_SIZE != 0){
+		printf("thread_mat_mul: the height of matrix B (C=A*B) must be multiple of BLOCK_SIZE(%d).\n", BLOCK_SIZE);
+		exit(-1);
+	}else if(params[1]->mat.stride%BLOCK_SIZE != 0){
+		printf("thread_mat_mul: the stride of matrix B (C=A*B) must be multiple of BLOCK_SIZE(%d).\n", BLOCK_SIZE);
+		exit(-1);
+	}
 
 	/*Create program object */
 	string sourceStr;
@@ -91,25 +106,25 @@ void* thread_mat_mul (void* arg){
 	clBuildProgram(program, 1,&device_id,NULL,NULL,NULL);
 	
 	/*Allocate memory on the device for input and output, and set kernel arguments*/
-	cl_mem* device_mem = new cl_mem [params.size()];
+	cl_mem* device_mem = new cl_mem [3];
 	cl_int status = 0;
 	cl_kernel kernel = clCreateKernel(program,"thread_mat_mul", NULL);
-	for(int i = 0;i<params.size();i++){  //for each parameter.
-		if(params[i].inout == 1){  //input
-			if (params[i].mat.data!=0){ //copy from host memory as input, read only.
-				device_mem[i] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, params[i].mat.stride * params[i].mat.h * sizeof(float),(void *) params[i].mat.data, NULL);
+	for(int i = 0;i<3;i++){  //for each parameter.
+		if(params[i]->inout == 1){  //input
+			if (params[i]->mat.data!=0){ //copy from host memory as input, read only.
+				device_mem[i] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, params[i]->mat.stride * params[i]->mat.h * sizeof(float),(void *) params[i]->mat.data, NULL);
 			}else{  // directly use the data that has been reside in the GPU.
-				device_mem[i] = params[i].device_buffer;
+				device_mem[i] = params[i]->device_buffer;
 			}
 		}else{  //output: create output buffer in the device, read and write access.
 			device_mem[i] = clCreateBuffer(
 		                          context,
 		                          CL_MEM_READ_WRITE|CL_MEM_ALLOC_HOST_PTR,
-		                          params[i].mat.stride * params[i].mat.h * sizeof(float),
+		                          params[i]->mat.stride * params[i]->mat.h * sizeof(float),
 		                          0,
 		                          &status);
 			if(status != CL_SUCCESS){
-				printf("thread_mat_mul: unable to allocate output memory buffer of size %ld bytes.\n",params[i].mat.stride * params[i].mat.h * sizeof(float));
+				printf("thread_mat_mul: unable to allocate output memory buffer of size %ld bytes.\n",params[i]->mat.stride * params[i]->mat.h * sizeof(float));
 				exit(-1);
 			}
 		}
@@ -118,7 +133,7 @@ void* thread_mat_mul (void* arg){
 
 	/*Run the kernel.*/
 	cl_event ndrEvt;
-	size_t global_work_size[2] = {params[0].mat.stride/BLOCK_SIZE,params[0].mat.h/BLOCK_SIZE};
+	size_t global_work_size[2] = {params[0]->mat.stride/BLOCK_SIZE,params[0]->mat.h/BLOCK_SIZE};
 	size_t local_work_size[2]  = {BLOCK_SIZE,BLOCK_SIZE};
 	clEnqueueNDRangeKernel(commandQueue, kernel, 1, NULL, global_work_size, NULL, 0, NULL, NULL);
     status = clEnqueueNDRangeKernel(
@@ -132,7 +147,7 @@ void* thread_mat_mul (void* arg){
                  NULL,  //event wait list.
                  &ndrEvt);
 	if(status != CL_SUCCESS){
-		printf("thread_mat_mul: unable to run the kernel.");
+		printf("thread_mat_mul: unable to run the kernel.\n");
 		exit(-1);
 	}
     
@@ -142,7 +157,12 @@ void* thread_mat_mul (void* arg){
 	return 0;
 }
 
-void MAT_MUL::run(std::vector<K_PARAM>* P){
+void MAT_MUL::run(K_PARAM* A, K_PARAM* B, K_PARAM* C){
+	K_PARAM** P = new K_PARAM* [3];
+	P[0] = A;
+	P[1] = B;
+	P[2] = C;
 	appsdk::SDKThread t;
 	t.create(thread_mat_mul,P);
+	t.join();
 }

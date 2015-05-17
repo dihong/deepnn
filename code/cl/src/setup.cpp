@@ -97,7 +97,7 @@ int CL_ENV::init(){
 		return -1;
 	}
 	
-	DEVICE* devices = new DEVICE [num_cpu + num_cpu];  //device informaion.
+	devices = new DEVICE [num_cpu + num_cpu];  //device informaion.
 	puts("============Device information============");
 	for(int i = 0;i<num_gpu;i++){
 		if(devices[i].getDeviceInfo(gpu_devices[i],"GPU")==false)
