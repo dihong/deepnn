@@ -1,0 +1,41 @@
+Type: INPUT						# input unit.
+ID: Input_1						# globally unique identifier.
+Dimension: 15-10-10-1			# batchsize-height-width-depth.
+Successor: Full_1, Full_2		# a list of identifiers of successor units.
+
+Type: FULL						# fully-connected unit.
+ID: Full_1						# globally unique identifier.
+InDim: inherit					# the input dimension is determined by predecessor(s).
+OutDim: 15-1-1-5				# batchsize-height-width-depth. The FULL output must be of height 1 and width 1. The depth value is the number of output units.
+Activation: ReLU				# the activation function: Tanh/ReLU
+Predecessor: Input_1			# a list of identifiers of predecessor units.
+Successor: Full_3				# a list of identifiers of successor units.
+
+Type: FULL						# fully-connected unit.
+ID: Full_2						# globally unique identifier.
+InDim: inherit					# the input dimension is determined by predecessor(s).
+OutDim: 15-1-1-10				# the number of output units.
+Activation: ReLU				# the activation function.
+Predecessor: Input_1			# a list of identifiers of predecessor units.
+Successor: Full_3, Full_4		# a list of identifiers of successor units.
+
+Type: FULL						# fully-connected unit.
+ID: Full_3						# globally unique identifier.
+InDim: inherit					# the input dimension is determined by predecessor(s).
+OutDim: 15-1-1-3				# the number of output units.
+Activation: ReLU				# the activation function.
+Predecessor: Full_1, Full_2		# a list of identifiers of predecessor units.
+Successor: Softmax_1			# a list of identifiers of successor units.
+
+Type: FULL						# fully-connected unit.
+ID: Full_4						# globally unique identifier.
+InDim: inherit					# the input dimension is determined by predecessor(s).
+OutDim: 15-1-1-7				# the number of output units.
+Activation: ReLU				# the activation function.
+Predecessor: Full_2				# a list of identifiers of predecessor units.
+Successor: Softmax_1			# a list of identifiers of successor units.
+
+Type: SOFTMAX					# softmax output unit.
+ID: Softmax_1					# globally unique identifier.
+Dimension: inherit				# the input dimension is determined by predecessor(s). Note that this dimension MUST be equal to number of training classes.
+Predecessor: Full_3, Full_4		# a list of identifiers of predecessor units.
