@@ -9,7 +9,7 @@ The development of neural networks now becomes hassle-free. The neural networks 
 cmake . && make
 
 # Project development status
-Under development, full features not yet supported.
+Under development
 
 # Developers
 Dihong Gong, Siva Prasad and Siliang Xia
