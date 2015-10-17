@@ -1,0 +1,81 @@
+Type: INPUT						# input unit.
+ID: Input_1						# globally unique identifier.
+Dimension: 2-10-10-3			# batchsize-height-width-depth.
+Successor: Conv_1, Conv_2, Full_1				# a list of identifiers of successor units.
+
+Type: CONV
+ID: Conv_1
+InDim: inherit
+OutDim: 2-10-10-2				# batchsize-height-width-depth.
+FilterHeight: 5					# Height of filter.
+FilterWidth: 5					# Width of filter.
+Step: 1							# The step size of filter. It has to be 1 currently.
+Normalization: None				# "Krizhevsky" if Krizhevsky's normalization method should be applied (see Krizhevsky, 2012), "None" if no normalization.
+Activation: ReLU
+Predecessor: Input_1			# a list of identifiers of predecessor units.
+Successor: Conv_4				# a list of identifiers of successor units.
+
+Type: CONV
+ID: Conv_2
+InDim: inherit
+OutDim: 2-10-10-1				# batchsize-height-width-depth.
+FilterHeight: 5					# Height of filter.
+FilterWidth: 5					# Width of filter.
+Step: 1							# The step size of filter. It has to be 1 currently.
+Normalization: None				# "Krizhevsky" if Krizhevsky's normalization method should be applied (see Krizhevsky, 2012), "None" if no normalization.
+Activation: ReLU
+Predecessor: Input_1			# a list of identifiers of predecessor units.
+Successor: Conv_3, Conv_4		# a list of identifiers of successor units.
+
+Type: FULL						# fully-connected unit.
+ID: Full_1						# globally unique identifier.
+InDim: inherit					# the input dimension is determined by predecessor(s).
+OutDim: 2-1-1-20				# batchsize-height-width-depth. The FULL output must be of height 1 and width 1. The depth value is the number of output units.
+Activation: ReLU				# the activation function: Tanh/ReLU
+Predecessor: Input_1			# a list of identifiers of predecessor units.
+Successor: Full_2				# a list of identifiers of successor units.
+
+Type: CONV
+ID: Conv_3
+InDim: inherit
+OutDim: 2-10-10-1				# batchsize-height-width-depth.
+FilterHeight: 5					# Height of filter.
+FilterWidth: 5					# Width of filter.
+Step: 1							# The step size of filter. It has to be 1 currently.
+Normalization: None				# "Krizhevsky" if Krizhevsky's normalization method should be applied (see Krizhevsky, 2012), "None" if no normalization.
+Activation: ReLU
+Predecessor: Conv_2				# a list of identifiers of predecessor units.
+Successor: Full_3				# a list of identifiers of successor units.
+
+Type: CONV
+ID: Conv_4
+InDim: inherit
+OutDim: 2-10-10-2				# batchsize-height-width-depth.
+FilterHeight: 4					# Height of filter.
+FilterWidth: 4					# Width of filter.
+Step: 1							# The step size of filter. It has to be 1 currently.
+Normalization: None				# "Krizhevsky" if Krizhevsky's normalization method should be applied (see Krizhevsky, 2012), "None" if no normalization.
+Activation: ReLU
+Predecessor: Conv_1, Conv_2		# a list of identifiers of predecessor units.
+Successor: Full_3				# a list of identifiers of successor units.
+
+Type: FULL						# fully-connected unit.
+ID: Full_2						# globally unique identifier.
+InDim: inherit					# the input dimension is determined by predecessor(s).
+OutDim: 2-1-1-15				# batchsize-height-width-depth. The FULL output must be of height 1 and width 1. The depth value is the number of output units.
+Activation: ReLU				# the activation function: Tanh/ReLU
+Predecessor: Full_1				# a list of identifiers of predecessor units.
+Successor: Full_3				# a list of identifiers of successor units.
+
+Type: FULL						# fully-connected unit.
+ID: Full_3						# globally unique identifier.
+InDim: inherit					# the input dimension is determined by predecessor(s).
+OutDim: 2-1-1-10				# batchsize-height-width-depth. The FULL output must be of height 1 and width 1. The depth value is the number of output units.
+Activation: ReLU				# the activation function: Tanh/ReLU
+Predecessor: Full_2, Conv_3, Conv_4		# a list of identifiers of predecessor units.
+Successor: Softmax_1			# a list of identifiers of successor units.
+
+Type: SOFTMAX					# softmax output unit.
+ID: Softmax_1					# globally unique identifier.
+Dimension: inherit				# the input dimension is determined by predecessor(s). Note that this dimension MUST be equal to number of training classes.
+Predecessor: Full_3				# a list of identifiers of predecessor units.

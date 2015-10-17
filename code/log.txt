@@ -1,0 +1,3716 @@
+============OpenCL Devices information============
+Number of gpu = 1, number of cpu = 0.
+name: Tahiti
+id: 7565744
+type: GPU
+local memory size (bytes): 32768
+global memory size (bytes): 2716860416
+max memory allocation (bytes): 1197735936
+constant memory size (bytes): 65536
+number of compute units: 32
+max work group size: 256
+---------------------------------------
+Total number of devices for computing: 1
+Number of training samples: 60000
+Number of classes: 10
+---------------------------------------
+INPUT unit: Input_1
+n = 1, h = 10, w = 10, d = 1
+Successor(s): 'Conv_1' 
+---------------------------------------
+CONV unit: Conv_1
+n = 1, h = 10, w = 10, d = 1
+Predecessor(s): 'Input_1' 
+Successor(s): 'Full_1' 
+---------------------------------------
+FULL unit: Full_1
+n = 1, h = 1, w = 1, d = 10
+Predecessor(s): 'Conv_1' 
+Successor(s): 'Softmax_1' 
+---------------------------------------
+SOFTMAX unit: Softmax_1
+Predecessor(s): 'Full_1' 
+---------------------------------------
+Predcessors of Conv_1: 'Input_1' 
+Predcessors of Full_1: 'Conv_1' 
+Predcessors of Softmax_1: 'Full_1' 
+Successors of Conv_1: 'Full_1' 
+Successors of Full_1: 'Softmax_1' 
+Successors of Input_1: 'Conv_1' 
+---------------------------------------
+algorithm = SGD
+base_lr = 0.0100
+gamma = 0.1000
+stepsize = 100000
+max_iter = 350000
+momentum = 0.9000
+---------------------------------------
+*Input_1 initialization done.	n = 1.	h = 10.	w = 10. d = 1. num_samples = 60000
+Graph: initializing Input_1.
+Graph: initializing Conv_1.
+*Conv_1 initialization done. n_stride = 1, d_stride = 168, n = 1, h = 10, w = 10, num_input_maps = 1, num_output_maps = 1, num_active_filters = 1.
+Graph: initializing Full_1.
+P = 128, Q = 16, N = 4, rtsm = 4, rtsn = 16, kernel_time = 0.000020, Err = 0.00000000
+FULL(Full_1)::init(dEdB): P = 128, Q = 16, N = 4, rtsm = 4, rtsn = 16, kernel_time = 0.000020
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 16, tsn = 32, wptm = 2, wptn = 4, kernel_time = 0.000024, gflops = 0.686912, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 16, tsn = 4, wptm = 2, wptn = 4, kernel_time = 0.000036, gflops = 0.455111, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 16, tsn = 4, wptm = 2, wptn = 2, kernel_time = 0.000025, gflops = 0.664872, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 16, tsn = 4, wptm = 1, wptn = 4, kernel_time = 0.000024, gflops = 0.672974, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 8, tsn = 32, wptm = 2, wptn = 4, kernel_time = 0.000029, gflops = 0.558545, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 8, tsn = 4, wptm = 2, wptn = 4, kernel_time = 0.000039, gflops = 0.418910, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 8, tsn = 4, wptm = 2, wptn = 2, kernel_time = 0.000025, gflops = 0.642980, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 8, tsn = 4, wptm = 1, wptn = 4, kernel_time = 0.000026, gflops = 0.623646, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 8, tsn = 4, wptm = 1, wptn = 2, kernel_time = 0.000019, gflops = 0.859511, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 4, tsn = 32, wptm = 2, wptn = 4, kernel_time = 0.000035, gflops = 0.470602, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 4, tsn = 4, wptm = 2, wptn = 4, kernel_time = 0.000042, gflops = 0.390784, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 4, tsn = 4, wptm = 2, wptn = 2, kernel_time = 0.000025, gflops = 0.659599, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 4, tsn = 4, wptm = 1, wptn = 4, kernel_time = 0.000028, gflops = 0.580540, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 4, tsn = 4, wptm = 1, wptn = 2, kernel_time = 0.000019, gflops = 0.863998, Err = 0.00000000
+FULL(Full_1)::init(dEdW): P = 128, Q = 16, N = 4, tsk = 4, tsm = 4, tsn = 4, wptm = 1, wptn = 2, kernel_time = 0.000019, gflops = 0.863998
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 16, wptm = 2, wptn = 4, kernel_time = 0.000170, gflops = 0.096307, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 16, wptm = 2, wptn = 2, kernel_time = 0.000103, gflops = 0.158441, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 16, wptm = 1, wptn = 4, kernel_time = 0.000109, gflops = 0.150397, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 8, wptm = 2, wptn = 4, kernel_time = 0.000188, gflops = 0.087286, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 8, wptm = 2, wptn = 2, kernel_time = 0.000108, gflops = 0.151151, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 8, wptm = 2, wptn = 1, kernel_time = 0.000080, gflops = 0.206072, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 8, wptm = 1, wptn = 4, kernel_time = 0.000115, gflops = 0.142792, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 8, wptm = 1, wptn = 2, kernel_time = 0.000077, gflops = 0.212405, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 16, wptm = 2, wptn = 4, kernel_time = 0.000274, gflops = 0.059747, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 16, wptm = 2, wptn = 2, kernel_time = 0.000130, gflops = 0.125816, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 16, wptm = 1, wptn = 4, kernel_time = 0.000133, gflops = 0.123154, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 8, wptm = 2, wptn = 4, kernel_time = 0.000264, gflops = 0.062061, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 8, wptm = 2, wptn = 2, kernel_time = 0.000138, gflops = 0.118661, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 8, wptm = 2, wptn = 1, kernel_time = 0.000086, gflops = 0.191335, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 8, wptm = 1, wptn = 4, kernel_time = 0.000143, gflops = 0.114248, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 2, tsn = 8, wptm = 1, wptn = 2, kernel_time = 0.000088, gflops = 0.185661, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 4, tsn = 16, wptm = 2, wptn = 4, kernel_time = 0.000160, gflops = 0.102495, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 4, tsn = 8, wptm = 2, wptn = 4, kernel_time = 0.000163, gflops = 0.100446, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 4, tsn = 8, wptm = 2, wptn = 2, kernel_time = 0.000116, gflops = 0.141241, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 4, tsn = 8, wptm = 1, wptn = 4, kernel_time = 0.000125, gflops = 0.131033, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 2, tsn = 16, wptm = 2, wptn = 4, kernel_time = 0.000208, gflops = 0.078938, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 2, tsn = 8, wptm = 2, wptn = 4, kernel_time = 0.000221, gflops = 0.073974, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 2, tsn = 8, wptm = 2, wptn = 2, kernel_time = 0.000133, gflops = 0.123017, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 8, tsm = 2, tsn = 8, wptm = 1, wptn = 4, kernel_time = 0.000138, gflops = 0.118916, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 4, tsn = 8, wptm = 2, wptn = 4, kernel_time = 0.000196, gflops = 0.083529, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 4, tsm = 2, tsn = 8, wptm = 2, wptn = 4, kernel_time = 0.000235, gflops = 0.069818, Err = 0.00000000
+FULL(Full_1)::init(forward): P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 8, wptm = 1, wptn = 2, kernel_time = 0.000077, gflops = 0.212405
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 32, wptm = 2, wptn = 4, kernel_time = 0.000065, gflops = 0.252109, Err = 0.00000000
+P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 32, wptm = 2, wptn = 4, kernel_time = 0.000067, gflops = 0.243060, Err = 0.00000000
+FULL(Full_1)::init(dEdX): P = 128, Q = 16, N = 4, tsk = 16, tsm = 4, tsn = 32, wptm = 2, wptn = 4, kernel_time = 0.000065, gflops = 0.252109
+*Full_1 initialization done.	P = 128.	Q = 16.	N = 4.	gflops(Tahiti) = 0.21.	
+Graph: initializing Softmax_1.
+*Softmax_1 initialization done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 is waiting for signal.
+Input_1 done. Reading 1 images (1-1).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02629852
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (2-2).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.03506851
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (3-3).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.04482841
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (4-4).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.04876518
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (5-5).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05236626
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (6-6).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05472755
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (7-7).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05438805
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (8-8).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05616951
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (9-9).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05381966
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (10-10).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05307961
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (11-11).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.04973602
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (12-12).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+22.84059525
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (13-13).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05149078
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (14-14).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05607414
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (15-15).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05854225
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (16-16).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.06031799
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (17-17).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.06177139
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (18-18).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.06105232
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (19-19).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05769539
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (20-20).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05523109
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (21-21).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.05243111
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (22-22).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.04808044
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (23-23).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.04339027
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (24-24).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.03897285
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (25-25).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.03185844
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (26-26).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02703667
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (27-27).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (28-28).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (29-29).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (30-30).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (31-31).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (32-32).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (33-33).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (34-34).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (35-35).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (36-36).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (37-37).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (38-38).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (39-39).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (40-40).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (41-41).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02621269
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (42-42).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (43-43).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (44-44).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (45-45).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (46-46).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (47-47).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (48-48).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (49-49).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (50-50).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (51-51).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (52-52).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (53-53).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (54-54).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (55-55).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (56-56).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (57-57).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (58-58).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (59-59).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (60-60).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (61-61).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (62-62).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (63-63).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (64-64).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (65-65).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (66-66).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (67-67).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (68-68).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (69-69).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (70-70).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (71-71).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (72-72).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (73-73).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (74-74).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (75-75).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (76-76).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (77-77).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (78-78).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (79-79).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (80-80).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (81-81).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (82-82).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (83-83).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (84-84).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (85-85).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (86-86).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (87-87).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (88-88).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (89-89).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (90-90).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (91-91).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (92-92).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (93-93).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (94-94).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (95-95).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (96-96).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (97-97).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (98-98).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (99-99).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+running unit Conv_1[1].
+Entering forward@Conv_1
+Input_1 done. Reading 1 images (100-100).
+Input_1 is waiting for signal.
+Leaving forward@Conv_1
+unit Conv_1[1] done.
+running unit Full_1[1].
+Entering forward@Full_1
+Full_1 is waiting for signal.
+Leaving forward@Full_1
+unit Full_1[1] done.
+running unit Softmax_1[1].
+Entering forward@Softmax_1
+23.02585220
+Leaving forward@Softmax_1
+unit Softmax_1[1] done.
+running unit Full_1[0].
+Entering backward@Full_1
+Full_1 is waiting for signal.
+PMEM:: dec_data2_ref_count(Softmax_1): memory object has been released.
+Leaving backward@Full_1
+unit Full_1[0] done.
+running unit Conv_1[0].
+Entering backward@Conv_1
+unit Conv_1[0] done.
+[mapping] 
+Terminal  Conv_1[1]  Conv_1[0]  Full_1[1]  Full_1[0]  Softmax_1[1]  
+[dist]
+0 9 9 9 9 9 
+5 0 4 1 3 2 
+1 9 0 9 9 9 
+4 9 3 0 2 1 
+2 9 1 9 0 9 
+3 9 2 9 1 0 
+[seralized] Conv_1[1](5.00) -> Full_1[1](4.00) -> Softmax_1[1](3.00) -> Full_1[0](2.00) -> Conv_1[0](1.00)
+---------------------------------------
+Input_1 done. Reading 1 images (101-101).
+Input_1 is waiting for signal.
